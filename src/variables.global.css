@@ -1,0 +1,166 @@
+/* COLORS */
+
+/* Use oklch if you can: oklch.com */
+.application-root {
+    --c-brand-primary: #0c69b3;
+    --c-brand-secondary: #094374;
+    --c-brand-tertiary: #04233f;
+  
+    /* Color names are based on the Adobe Spectrum Color System (https://spectrum.adobe.com/page/color-system/)  */
+    --c-gray-900: #000000;
+    --c-gray-800: #333333;
+    --c-gray-700: #595959;
+    --c-gray-500: #afafaf;
+    --c-gray-400: #b5bdc6;
+    --c-gray-200: #e0e0e0;
+    --c-gray-100: #f4f4f4;
+    --c-gray-50: #ffffff;
+    --c-blue-600: #0066cc;
+    --c-blue-500: #2ca2d7;
+    --c-blue-150: #cde9f6;
+    --c-blue-100: #ecf7fb;
+    --c-blue-50: #f7fbfd;
+    --c-yellow-500: #fed65d;
+    --c-yellow-200: #fff4d4;
+    --c-yellow-100: #fcf8ef;
+    --c-yellow-50: #fee18b;
+    --c-red-900: #d93312;
+    --c-red-50: #f9d3cb;
+    --c-green-900: #3c812b;
+    --c-green-50: #b5e7b1;
+  
+    /* Theme colors are based on the Material Color Roles (https://m3.material.io/styles/color/system/how-the-system-works) */
+    --theme-primary: var(--c-brand-primary);
+    --theme-on-primary: var(--c-gray-50);
+    --theme-secondary: var(--c-brand-secondary);
+    --theme-on-secondary: var(--c-gray-50);
+    --theme-tertiary: var(--c-brand-tertiary);
+    --theme-on-tertiary: var(--c-gray-50);
+    --theme-on-tertiary-variant: var(--c-gray-400);
+    --theme-surface: var(--c-gray-50);
+    --theme-on-surface: var(--c-gray-900);
+    --theme-on-surface-variant: var(--c-gray-700);
+    --theme-surface-container: var(--c-gray-100);
+    --theme-on-surface-container: var(--c-gray-900);
+    --theme-outline: var(--c-gray-200);
+    --theme-outline-variant: var(--c-gray-400);
+  
+    --theme-success: var(--c-green-50);
+    --theme-on-success: var(--c-gray-800);
+    --theme-error: var(--c-red-900);
+    --theme-on-error: var(--c-gray-50);
+    --theme-error-container: var(--c-red-50);
+    --theme-on-error-container: var(--c-gray-800);
+    --theme-warning: var(--c-yellow-50);
+    --theme-on-warning: var(--c-gray-800);
+  }
+  
+  @supports (color: oklch(100% 0 0)) {
+    .application-root {
+      --c-brand-primary: oklch(51.17% 0.14 250);
+      --c-brand-secondary: oklch(37.73% 0.1 250);
+      --c-brand-tertiary: oklch(25.17% 0.064 250);
+  
+      --c-gray-900: oklch(0% 0 0);
+      --c-gray-800: oklch(32.11% 0 0);
+      --c-gray-700: oklch(46.4% 0 0);
+      --c-gray-500: oklch(75.4% 0 0);
+      --c-gray-400: oklch(79.56% 0.015 250);
+      --c-gray-200: oklch(90.67% 0 0);
+      --c-gray-100: oklch(96.72% 0 0);
+      --c-gray-50: oklch(100% 0 0);
+      --c-blue-600: oklch(52.2% 0.177 255.83);
+      --c-blue-500: oklch(67.26% 0.127 233.3);
+      --c-blue-150: oklch(91.76% 0.034 227.43);
+      --c-blue-100: oklch(96.91% 0.013 221.43);
+      --c-blue-50: oklch(98.56% 0.005 228.82);
+      --c-yellow-500: oklch(88.82% 0.144 90.81);
+      --c-yellow-200: oklch(96.76% 0.043 91.26);
+      --c-yellow-100: oklch(98% 0.013 90);
+      --c-yellow-50: oklch(91.54% 0.11 91.42);
+      --c-red-900: oklch(58% 0.205 33.04);
+      --c-red-50: oklch(89.74% 0.044 33.04);
+      --c-green-900: oklch(54% 0.14 140);
+      --c-green-50: oklch(87.92% 0.09 142.89);
+    }
+  }
+  
+  /* SPACING */
+  
+  .application-root {
+    --spacing-tiny: 4px;
+    --spacing-extra-small: 8px;
+    --spacing-small: 12px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-extra-large: 32px;
+  
+    --spacing-grow-to-medium: min(0.5rem, var(--spacing-medium));
+    --spacing-grow-to-large: min(0.75rem, var(--spacing-large));
+    --spacing-grow-to-extra-large: min(1rem, var(--spacing-extra-large));
+  }
+  
+  /* BORDERS */
+  
+  .application-root {
+    --border-radius-rounded: min(0.5rem, 8px);
+    --border-radius-rounded-small: min(0.3rem, 6px);
+    --border-radius-rounded-tiny: min(0.25rem, 4px);
+  
+    --border: 1px solid;
+    --border-themed: 1px solid var(--theme-outline);
+    --border-themed-variant: 1px solid var(--theme-outline-variant);
+    --border-heavy: 2px solid;
+    --border-heavy-themed: var(--border-heavy) var(--theme-outline);
+    --border-error: 2px solid var(--theme-error);
+    --border-error-heavy: 3px solid var(--theme-error);
+  }
+  
+  /* FONT */
+  
+  .application-root {
+    --fs-small: 0.875rem;
+    --fs-normal: 1rem;
+    --fs-body: 1.125rem;
+    --fs-heading: 1.5rem;
+    --fs-heading-2: 1.125rem;
+    --fs-title: 2.25rem;
+  
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bolder: 500;
+    --fw-bold: 700;
+  
+    --font-family: system-ui, sans-serif;
+  }
+  
+  /* Right-to-left */
+  
+  /*
+   * Use calc(var(--dir) * ...) to flip things like rotations
+   * that are otherwise challenging to mirror
+   * or don't have logical properties.
+   */
+  [dir="ltr"] .application-root,
+  .application-root [dir="ltr"],
+  .application-root[dir="ltr"] {
+    --dir: 1;
+  }
+  
+  [dir="rtl"] .application-root,
+  .application-root [dir="rtl"],
+  .application-root[dir="rtl"] {
+    --dir: -1;
+  }
+  
+  /* Page padding */
+  
+  .application-root {
+    --page-padding-inline: var(--spacing-medium);
+    --page-max-inline: 1440px;
+    --page-max-inline-padding: calc(
+      var(--page-padding-inline) +
+        max(0px, calc((100dvi - var(--page-max-inline)) / 2))
+    );
+  }
+  

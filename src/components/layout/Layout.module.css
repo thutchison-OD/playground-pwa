@@ -1,0 +1,30 @@
+.main {
+  --Banner-max-content-inline: var(--page-max-inline);
+
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+  }
+  
+  .header {
+    padding-block: var(--spacing-large);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border-themed-variant);
+    padding-inline: var(--page-max-inline-padding);
+  }
+  
+  .header h1 {
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-bolder);
+  }
+  
+  .footer {
+    padding: var(--spacing-small);
+    border-top: var(--border-themed-variant);
+    background-color: var(--theme-surface);
+    position: sticky;
+    bottom: 0;
+    padding-block-end: calc(var(--spacing-small) + env(safe-area-inset-bottom));
+  }
+  

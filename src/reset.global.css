@@ -1,0 +1,58 @@
+/* RESET */
+/*
+ * You'll want to import this file as a layer,
+ * otherwise the class specificity will wreak havoc.
+ */
+
+ .application-root :where(*, *::before, *::after) {
+    box-sizing: border-box;
+  }
+  
+  .application-root,
+  .application-root * {
+    margin: 0;
+  }
+  
+  .application-root :where(h1, h2, h3, h4, h5, h6) {
+    font-weight: var(--fw-normal);
+  }
+  
+  .application-root :where(input, button, textarea, select) {
+    font: inherit;
+  }
+  
+  .application-root :where(fieldset, legend, ol, ul) {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .application-root :where(button, select, input:not([type="checkbox"])) {
+    appearance: none;
+  }
+  
+  .application-root input {
+    accent-color: var(--theme-primary);
+  }
+  
+  .application-root fieldset {
+    border: none;
+  }
+  
+  .application-root :where(button, summary) {
+    cursor: pointer;
+  }
+  
+  .application-root a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .application-root hr {
+    border: none;
+  }
+  
+  .application-root svg {
+    visibility: visible;
+    width: 1rem;
+  }
+  
